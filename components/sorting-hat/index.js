@@ -2,8 +2,11 @@ import styles from "./styles.module.css";
 import useSound from "use-sound";
 import * as sound from "../../public/sounds";
 import fetcher from "../../lib/fetcher";
+import { useRouter } from "next/router";
 
 export default function SortingHat() {
+  const router = useRouter();
+
   const [name, setName] = React.useState("");
   const [house, setHouse] = React.useState(null);
 
@@ -13,7 +16,7 @@ export default function SortingHat() {
   const [slytherin] = useSound(sound.slytherin);
 
   const handleSort = async () => {
-    const response = await fetcher("https://www.potterapi.com/v1/sortingHat");
+    const response = await fetcher(`${process.env.BACKEND_API}/sortingHat`);
     setHouse(response);
 
     if (response === "Gryffindor") {
@@ -25,6 +28,8 @@ export default function SortingHat() {
     } else {
       slytherin();
     }
+
+    router.push("/characters");
   };
 
   return (
@@ -35,6 +40,7 @@ export default function SortingHat() {
         <input
           type="text"
           name="name"
+          value={name}
           onChange={(e) => setName(e.target.value)}
         />
       </div>
@@ -43,11 +49,6 @@ export default function SortingHat() {
           Sort Me!
         </button>
       </div>
-      {house && (
-        <h2>
-          Hoşgeldin {name}, {house}
-        </h2>
-      )}
     </div>
   );
 }
