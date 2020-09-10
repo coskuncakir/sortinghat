@@ -7,7 +7,6 @@ function Layout({ children }) {
     <>
       <Header />
       <main className={styles.main}>{children}</main>
-      <Footer />
     </>
   );
 }
