@@ -1,13 +1,17 @@
 .container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  margin-top: 24px;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.sortingHat {
+  max-width: 260px;
+  margin-bottom: 24px;
+}
+
+.textField {
+  margin-bottom: 24px;
+}
+
+.welcome {
+  margin-top: 0;
 }
