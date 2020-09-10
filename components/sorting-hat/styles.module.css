@@ -13,5 +13,10 @@
 }
 
 .welcome {
+  color: var(--c-primary);
   margin-top: 0;
+}
+
+.house {
+  color: var(--c-secondary);
 }
