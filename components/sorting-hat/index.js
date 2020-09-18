@@ -54,7 +54,7 @@ export default function SortingHat() {
     <Container maxWidth="xs" className={styles.container}>
       <img
         className={styles.sortingHat}
-        src="images/sorting-hat.png"
+        src="images/sorting-hat.svg"
         alt="Sorting Hat"
       />
       {!house && (

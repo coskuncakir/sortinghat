@@ -1,41 +1,40 @@
 import styles from "./styles.module.css";
 import { useRouter } from "next/router";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Button from "@material-ui/core/Button";
-import { Link } from "@material-ui/core";
+import Container from "../container";
 
 function Header() {
   const router = useRouter();
 
   return (
-    <AppBar position="static">
-      <Toolbar>
-        <Link
-          color="inherit"
-          onClick={() => router.push("/")}
-          className={styles.logo}
+    <header className={styles.header}>
+      <a
+        className={styles.logo}
+        onClick={() => router.push("/")}
+        className={styles.logo}
+      >
+        <img src="images/harrypotter.svg" height="40" alt="logo" />
+      </a>
+      <nav className={styles.nav}>
+        <a
+          className={styles.menuItem}
+          onClick={() => router.push("/sorting-hat")}
         >
-          Harry Potter
-        </Link>
-
-        <Button color="inherit" onClick={() => router.push("/sorting-hat")}>
           Sorting Hat
-        </Button>
-
-        <Button color="inherit" onClick={() => router.push("/characters")}>
+        </a>
+        <a
+          className={styles.menuItem}
+          onClick={() => router.push("/characters")}
+        >
           Characters
-        </Button>
-
-        <Button color="inherit" onClick={() => router.push("/houses")}>
+        </a>
+        <a className={styles.menuItem} onClick={() => router.push("/houses")}>
           Houses
-        </Button>
-
-        <Button color="inherit" onClick={() => router.push("/spells")}>
+        </a>
+        <a className={styles.menuItem} onClick={() => router.push("/spells")}>
           Spels
-        </Button>
-      </Toolbar>
-    </AppBar>
+        </a>
+      </nav>
+    </header>
   );
 }
 

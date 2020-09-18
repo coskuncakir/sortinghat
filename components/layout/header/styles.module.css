@@ -1,3 +1,19 @@
+.header {
+  background: #873436;
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   flex-grow: 1;
+}
+.nav {
+  display: flex;
+  color: #ffffff;
+}
+
+.menuItem {
+  padding: 16px;
+  cursor: pointer;
 }

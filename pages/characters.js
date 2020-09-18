@@ -1,7 +1,9 @@
+import styles from "../styles/Characters.module.css";
 import Head from "next/head";
 import Layout from "../components/layout";
 import useSWR from "swr";
 import fetcher from "../lib/fetcher";
+import Character from "../components/character";
 
 export default function CharactersPage() {
   const { data, error } = useSWR(
@@ -18,9 +20,11 @@ export default function CharactersPage() {
         <title>Characters</title>
       </Head>
       <Layout>
-        {data.map((character) => (
-          <div key={character._id}>{character.name}</div>
-        ))}
+        <div className={styles.characters}>
+          {data.map((character) => (
+            <Character key={character._id} character={character} />
+          ))}
+        </div>
       </Layout>
     </>
   );
