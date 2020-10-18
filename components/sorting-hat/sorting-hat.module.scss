@@ -1,0 +1,26 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  min-width: 300px;
+  place-items: center;
+}
+
+.sortingHat {
+  svg {
+    width: 200px;
+  }
+}
+
+.textField input {
+  min-width: 280px;
+}
+
+.welcome {
+  color: var(--c-primary);
+  margin-top: 0;
+}
+
+.house {
+  color: var(--c-primary);
+}

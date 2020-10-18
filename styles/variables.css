@@ -1,29 +1,29 @@
 :root {
-  --c-primary: #fff;
-  --c-secondary: #6e767d;
-  --c-text-color: #ffffff;
+  --c-text: #6e767d;
+  --c-background: #ffffff;
+  --c-primary: #e09c09;
 }
 
 .gryffindor:root {
-  --c-primary: #660000;
-  --c-secondary: #e09c09;
-  --c-text-color: #ffffff;
+  --c-text: #ffffff;
+  --c-background: #660000;
+  --c-primary: #e09c09;
 }
 
 .hufflepuff:root {
-  --c-primary: #1f1e19;
-  --c-secondary: #ff9d0c;
-  --c-text-color: #ffffff;
+  --c-text: #ffffff;
+  --c-background: #1f1e19;
+  --c-primary: #ff9d0c;
 }
 
 .slytherin:root {
+  --c-text: #ffffff;
+  --c-background: #075b4b;
   --c-primary: #2f751d;
-  --c-secondary: #cccccc;
-  --c-text-color: #ffffff;
 }
 
 .ravenclaw:root {
-  --c-primary: #1b3956;
-  --c-secondary: #8e501d;
-  --c-text-color: #ffffff;
+  --c-text: #ffffff;
+  --c-background: #1b3956;
+  --c-primary: #8e501d;
 }

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Layout from "../components/layout";
 import useSWR from "swr";
-import fetcher from "../lib/fetcher";
+import fetcher from "../utils/fetcher";
 
 export default function SpellsPage() {
   const { data, error } = useSWR(

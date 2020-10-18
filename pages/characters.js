@@ -2,7 +2,7 @@ import styles from "../styles/Characters.module.css";
 import Head from "next/head";
 import Layout from "../components/layout";
 import useSWR from "swr";
-import fetcher from "../lib/fetcher";
+import fetcher from "../utils/fetcher";
 import Character from "../components/character";
 
 export default function CharactersPage() {

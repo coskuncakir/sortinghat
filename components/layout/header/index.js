@@ -1,39 +1,51 @@
-import styles from "./styles.module.css";
-import { useRouter } from "next/router";
-import Container from "../container";
+import React from "react";
+import styles from "./header.module.scss";
+import Logo from "../../logo";
+import Hamburger from "hamburger-react";
+import cn from "classnames";
+import Link from "../../link";
 
 function Header() {
-  const router = useRouter();
+  const [isOpen, setOpen] = React.useState(false);
 
   return (
-    <header className={styles.header}>
-      <a
-        className={styles.logo}
-        onClick={() => router.push("/")}
-        className={styles.logo}
-      >
-        <img src="images/harrypotter.svg" height="40" alt="logo" />
-      </a>
-      <nav className={styles.nav}>
-        <a
-          className={styles.menuItem}
-          onClick={() => router.push("/sorting-hat")}
-        >
-          Sorting Hat
-        </a>
-        <a
-          className={styles.menuItem}
-          onClick={() => router.push("/characters")}
-        >
-          Characters
-        </a>
-        <a className={styles.menuItem} onClick={() => router.push("/houses")}>
-          Houses
-        </a>
-        <a className={styles.menuItem} onClick={() => router.push("/spells")}>
-          Spels
-        </a>
-      </nav>
+    <header className={cn(styles.header, isOpen ? styles.open : null)}>
+      <div className={styles.container}>
+        <div className={styles.logo}>
+          <Link href="/">
+            <a>
+              <Logo />
+            </a>
+          </Link>
+        </div>
+        <nav className={styles.nav}>
+          <ul>
+            <li>
+              <Link href="/sorting-hat" activeClassName={styles.active}>
+                <a>Sorting Hat</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/characters" activeClassName={styles.active}>
+                <a>Characters</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/houses" activeClassName={styles.active}>
+                <a>Houses</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/spells" activeClassName={styles.active}>
+                <a>Spells</a>
+              </Link>
+            </li>
+          </ul>
+        </nav>
+        <div className={styles.hamburger}>
+          <Hamburger toggled={isOpen} toggle={setOpen} />
+        </div>
+      </div>
     </header>
   );
 }

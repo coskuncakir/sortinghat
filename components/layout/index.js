@@ -1,5 +1,4 @@
-import styles from "./styles.module.css";
-import Footer from "./footer";
+import styles from "./layout.module.scss";
 import Header from "./header";
 import Container from "./container";
 
