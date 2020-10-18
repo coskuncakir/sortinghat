@@ -1,7 +1,7 @@
 :root {
-  --c-text: #6e767d;
-  --c-background: #ffffff;
-  --c-primary: #e09c09;
+  --c-text: #fff;
+  --c-background: #232324;
+  --c-primary: #cea54e;
 }
 
 .gryffindor:root {
