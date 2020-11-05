@@ -1,4 +1,4 @@
-import styles from "../styles/Characters.module.css";
+import styles from "../styles/Characters.module.scss";
 import Head from "next/head";
 import Layout from "../components/layout";
 import useSWR from "swr";

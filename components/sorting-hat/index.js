@@ -1,15 +1,14 @@
+import React from "react";
 import styles from "./sorting-hat.module.scss";
 import useSound from "use-sound";
 import * as sound from "../../public/sounds";
 import fetcher from "../../utils/fetcher";
 import { useRouter } from "next/router";
-import StoreContext from "../../store";
 import delay from "../../utils/delay";
 import Input from "../input";
 import Button from "../button";
 
 export default function SortingHat() {
-  const store = React.useContext(StoreContext);
   const router = useRouter();
 
   const [name, setName] = React.useState("");
@@ -39,8 +38,6 @@ export default function SortingHat() {
     } else {
       slytherin();
     }
-
-    store.onHouseChange(response.toLowerCase());
   };
 
   const handleReset = () => {
