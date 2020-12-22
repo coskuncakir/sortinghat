@@ -7,6 +7,9 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background: var(--c-background);
   color: var(--c-text);
+  transition-property: background-color;
+  transition-timing-function: ease-out;
+  transition-duration: 0.4s;
 }
 
 a {

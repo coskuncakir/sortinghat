@@ -2,5 +2,28 @@
   --c-text: #000000;
   --c-background: #ffffff;
   --c-primary: #cfa64d;
-  --c-muted: rgba(60, 72, 86, 0.76);
+}
+
+.gryffindor:root {
+  --c-text: #ffffff;
+  --c-background: #660000;
+  --c-primary: #e09c09;
+}
+
+.hufflepuff:root {
+  --c-text: #ffffff;
+  --c-background: #1f1e19;
+  --c-primary: #ff9d0c;
+}
+
+.slytherin:root {
+  --c-text: #ffffff;
+  --c-background: #075b4b;
+  --c-primary: #2f751d;
+}
+
+.ravenclaw:root {
+  --c-text: #ffffff;
+  --c-background: #1b3956;
+  --c-primary: #8e501d;
 }

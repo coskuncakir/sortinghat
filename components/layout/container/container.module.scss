@@ -9,8 +9,9 @@
     padding-right: 4vw;
   }
 
-  @media (min-width: 1500px) {
-    max-width: 87.5rem;
-    padding: 0;
+  @media (min-width: 1200px) {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 75rem;
   }
 }
