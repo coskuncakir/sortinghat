@@ -8,6 +8,7 @@ export default function Home() {
     <>
       <Head>
         <title>Sorting Hat</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
       </Head>
       <Layout>
         <SortingHat />
