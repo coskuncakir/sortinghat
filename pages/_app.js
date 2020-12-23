@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }) {
         />
         <title>Sorting Hat</title>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={`${process.env.BASE_URL}`} />
         <meta name="twitter:title" content="Sorting Hat" />
         <meta
