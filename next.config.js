@@ -1,4 +1,7 @@
 module.exports = {
+  env: {
+    BASE_URL: "https://sortinghat.vercel.app",
+  },
   optionalCatchAll: true,
   webpack(config, options) {
     config.module.rules.push({

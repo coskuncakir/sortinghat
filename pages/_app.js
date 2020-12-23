@@ -34,13 +34,16 @@ function MyApp({ Component, pageProps }) {
         <title>Sorting Hat</title>
         <link rel="manifest" href="/manifest.json" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content="https://sortinghat.vercel.app" />
+        <meta name="twitter:url" content={`${process.env.BASE_URL}`} />
         <meta name="twitter:title" content="Sorting Hat" />
         <meta
           name="twitter:description"
           content="A Next.js app which magically determines your house in Hogwarts."
         />
-        <meta name="twitter:image" content="/images/sorting-hat.png" />
+        <meta
+          name="twitter:image"
+          content={`${process.env.BASE_URL}/images/sorting-hat.jpg`}
+        />
         <meta name="twitter:creator" content="@coscakir" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Sorting Hat" />
@@ -49,8 +52,11 @@ function MyApp({ Component, pageProps }) {
           content="A Next.js app which magically determines your house in Hogwarts."
         />
         <meta property="og:site_name" content="Sorting Hat" />
-        <meta property="og:url" content="https://sortinghat.vercel.app" />
-        <meta property="og:image" content="/images/sorting-hat.png" />
+        <meta property="og:url" content={`${process.env.BASE_URL}`} />
+        <meta
+          property="og:image"
+          content={`${process.env.BASE_URL}/images/sorting-hat.jpg`}
+        />
       </Head>
       <StoreContext.Provider value={{ house, onHouseChange }}>
         <Component {...pageProps} />
