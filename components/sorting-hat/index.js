@@ -47,7 +47,6 @@ export default function SortingHat() {
 
   const handleReset = () => {
     setHouse("");
-    setName("");
   };
 
   return (
@@ -64,6 +63,7 @@ export default function SortingHat() {
             type="text"
             placeholder="Can i have your name please?"
             onChange={(e) => setName(e.target.value)}
+            value={name}
             disabled={loading}
             autoFocus={true}
           />

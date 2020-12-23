@@ -1,7 +1,7 @@
 .input {
   border-radius: 28px;
   padding: 1.2rem 1.6rem;
-  background-color: var(--c-background);
+  background-color: rgba(0, 0, 0, 0.2);
   border: 2px solid var(--c-primary);
   box-shadow: none;
   line-height: normal;
@@ -9,6 +9,7 @@
   width: 100%;
   font-size: 1rem;
   appearance: none;
+  text-align: center;
 
   &:focus {
     border: 2px solid var(--c-primary);
