@@ -1,6 +1,4 @@
-const withPWA = require("next-pwa");
-
-module.exports = withPWA({
+module.exports = {
   optionalCatchAll: true,
   webpack(config, options) {
     config.module.rules.push({
@@ -16,4 +14,4 @@ module.exports = withPWA({
     });
     return config;
   },
-});
+};
