@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }) {
           name="twitter:image"
           content={`${process.env.BASE_URL}/images/sorting-hat.jpg`}
         />
-        <meta name="twitter:creator" content="@coscakir" />
+        <meta name="twitter:creator" content="@coskuncakir_" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Sorting Hat" />
         <meta
